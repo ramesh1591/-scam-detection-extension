@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Scam Detection</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 15px;
+      margin: 0;
+      background: #f9f9f9;
+      text-align: center;
+    }
+    h2 {
+      font-size: 18px;
+      color: #333;
+      margin-bottom: 15px;
+    }
+    button {
+      padding: 10px 20px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    button:disabled {
+      background: #cccccc;
+      cursor: not-allowed;
+    }
+    #result {
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+    }
+    #result.success {
+      background: #d4edda;
+      border: 2px solid #28a745;
+      color: #155724;
+    }
+    #result.error {
+      background: #f8d7da;
+      border: 2px solid #dc3545;
+      color: #721c24;
+    }
+  </style>
+</head>
+<body>
+  <h2>Scam Detection Plugin</h2>
+  <button id="detectBtn">Check Current Page</button>
+  <div id="result" style="display: none;"></div>
+  <audio id="scamAlert" src="alert.mp3"></audio>  <!-- 🔊 Sound Alert -->
+  <script src="popup.js"></script>
+</body>
+</html>

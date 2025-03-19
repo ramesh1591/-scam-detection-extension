@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Scam Detection Plugin",
+  "version": "1.0.0",
+  "description": "Detect scams on webpages using a robust ML model.",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["*://*/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
