@@ -35,7 +35,7 @@ fp16_enabled = torch.cuda.is_available()
 # 7️⃣ Optimized Training Arguments for Faster Training (~10-15 min).
 training_args = TrainingArguments(
     output_dir="./results",
-    num_train_epochs=1,  # Quick training for 1 epoch
+    num_train_epochs=3,  # Quick training for 3 epoch
     per_device_train_batch_size=16,  # Increase if GPU available
     per_device_eval_batch_size=16,
     evaluation_strategy="steps",  # Evaluate every N steps
